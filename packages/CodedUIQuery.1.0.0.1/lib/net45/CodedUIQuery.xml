@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>
+CodedUIQuery
+</name>
+    </assembly>
+    <members>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Parent(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ Get Parent elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Children(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Get children elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.WaitForChildren(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ Wait until you find children elements more than one by the selector, and get these at a found moment.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <param name="timeout">
+                <para>Set a time interval for time-out.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>When an elements was not found until time-out time.</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Filter(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Get the elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Find(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Get all descendants elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.WaitForFind(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ Wait until you find descendants elements more than one by the selector, and get these at a found moment.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <param name="timeout">
+                <para>Set a time interval for time-out.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>When an elements was not found until time-out time.</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Click(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ Click the elements, and get clickable elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Click(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.Int32,System.Int32,Net.Surviveplus.CodedUIQuery.MouseButton)">
+            <summary>
+                <para>
+ Click the elements, and get clickable elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="x">
+                <para>Set the horizontal relative coordinate from the clickable position. </para>
+            </param>
+            <param name="y">
+                <para>Set the vertical relative coordinate from the clickable position.</para>
+            </param>
+            <param name="button">
+                <para>Set the mouse button to click this element.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.MoveMouseTo(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ Move the mouse cursor from current position to the element.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks>
+                <para>If you call Click method without using MoveMouseTo method, the mouse cursor will not move from current position.</para>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.SetText(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Set text to the elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="text">
+                <para>Set the text to set to the elements.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.InputText(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Input text to the element, as if typed on the keyboard.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="text">
+                <para>Set the text to input to the elements.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.SendKeys(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ Sends one or more keystrokes to the element, as if typed on the keyboard. 
+ It is similar to Keyboard.SendKeys method.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="keys">
+                <para>A String that defines the keys to send.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks>
+                <para>Confirm how to set keys argument at Keyboad.SendKeys method document.</para>
+                <see>https://msdn.microsoft.com/en-us/library/ms127847(v=vs.110).aspx</see>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Sleep(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.TimeSpan)">
+            <summary>
+                <para>
+ Blocks the current thread for a specified time.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="timeout">
+                <para>A System.TimeSpan set to the amount of time for which the thread is blocked. </para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.Handle">
+            <summary>
+ ウィンドウハンドルを取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfProcessName">
+            <summary>
+ ProcessName プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.ProcessName">
+            <summary>
+ プロセス名を取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfClassName">
+            <summary>
+ ClassName プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.ClassName">
+            <summary>
+ クラス名を取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfWindowTitle">
+            <summary>
+ WindowTitle プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.WindowTitle">
+            <summary>
+ ウィンドウタイトルを取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WindowHandleElement">
+            <summary>
+                <para>
+ Query and operate Desktop App elements, by using only Windows handle and Win32API. 
+ This class is Obsolete.
+ </para>
+            </summary>
+            <remarks>
+ You can start, to query or operate, from Dekstop.Handles property, App.Handle property.
+ This is implementation with the results used for users more than 100,000. But this class is Obsolete.
+ Use WpfElement class instead of this class, if you are able to use it.
+ </remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.My.Resources.Resources.ResourceManager">
+            <summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.My.Resources.Resources.Culture">
+            <summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.My.Resources.Resources">
+            <summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Left">
+            <summary>
+                <para>The left mouse button. </para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Middle">
+            <summary>
+                <para>The middle mouse button. </para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Right">
+            <summary>
+                <para>The right mouse button. </para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.MouseButton">
+            <summary>
+                <para>Defines values that specify the buttons on a mouse device. </para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.ToString">
+            <summary>
+                <para>Returns a string that represents the current object.</para>
+            </summary>
+            <returns>
+                <para>A string that represents the current object.</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.#ctor(System.Windows.Automation.AutomationElement)">
+            <summary>
+ Initializes a new instance of the class.
+ </summary>
+            <param name="automation"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.#ctor">
+            <summary>
+ Initializes a new instance of the class.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WpfElement.NativeMethods">
+            <summary>
+ Allows managed code to call unmanaged functions with Platform Invocation Services (PInvoke).
+ </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WpfElement.UIAutomationElement">
+            <summary>
+ Get System.Windows.Automation.AutomationElement object.
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WpfElement">
+            <summary>
+                <para>
+ Query and operate Desktop App elements, by using Microsoft UI Automation.
+ It will work to Windows Store App and Windows Phone App on "Coded UI Test" of Visual Studio 2013 Premium/Ultimate. 
+ </para>
+            </summary>
+            <remarks>
+ You can start, to query or operate, from Dekstop.Elements property.
+ Use WindowHandleElement class instead of this class, if it don't work well.
+ </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.ContainsText">
+            <summary>
+ Indicates whether there is data on the Clipboard in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <returns>true if there is text data on the Clipboard; otherwise, false.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.GetText">
+            <summary>
+ Retrieves text data from the Clipboard in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <returns>The Clipboard text data or System.String.Empty if the Clipboard does not contain data in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.Clear">
+            <summary>
+ Removes all data from the Clipboard.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.SetText(System.String)">
+            <summary>
+ Clears the Clipboard and then adds text data in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <param name="text">
+ The text to add to the Clipboard.
+ </param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.Clipboard">
+            <summary>
+ Operate Clipboard in "Coded UI Test" or  "Desktop Automation",  instead  of Windows.Forms.Clipboard.
+ This will run in single-threaded apartment (STA) mode thread.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.Desktop.Handles">
+            <summary>
+ Get IOperationElement object to query via CodedUIQuery with using Windows Handles.
+ Operate Windows Forms Apps, not WPF Apps, for "Coded UI Test" or "Desktop Automation".
+ This is Obsolete. Use Elements property instead of this, if you can.
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.Desktop.Elements">
+            <summary>
+ Get IOperationElement object to query via CodedUIQuery with Microsoft UIAutomation technology.
+ Operate both WPF Apps and Windows Forms Apps, for "Coded UI Test" or "Desktop Automation".
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.Desktop">
+            <summary>
+                <para>Operate to Windows Desktop elements.</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Parent">
+            <summary>
+                <para>
+ Get Parent element as IEnumerable&lt;IOperationElement&gt;.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Children(System.String)">
+            <summary>
+                <para>
+ Get children elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.WaitForChildren(System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ Wait until you find children elements more than one by the selector, and get these at a found moment.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <param name="timeout">
+                <para>Set a time interval for time-out.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>When an elements was not found until time-out time.</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Filter(System.String)">
+            <summary>
+                <para>
+ Get the elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Find(System.String)">
+            <summary>
+                <para>
+ Get all descendants elements selected by the selector.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.WaitForFind(System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ Wait until you find descendants elements more than one by the selector, and get these at a found moment.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="selector">
+                <para>Set the selector.</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>Use comma separated selector to use OR condition.</para>
+            </param>
+            <param name="timeout">
+                <para>Set a time interval for time-out.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>When an elements was not found until time-out time.</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Click">
+            <summary>
+                <para>
+ Click the elements, and get clickable elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Click(System.Int32,System.Int32,Net.Surviveplus.CodedUIQuery.MouseButton)">
+            <summary>
+                <para>
+ Click the elements, and get clickable elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="x">
+                <para>Set the horizontal relative coordinate from the clickable position. </para>
+            </param>
+            <param name="y">
+                <para>Set the vertical relative coordinate from the clickable position.</para>
+            </param>
+            <param name="button">
+                <para>Set the mouse button to click this element.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.MoveMouseTo">
+            <summary>
+                <para>
+ Move the mouse cursor from current position to the element.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks>
+                <para>If you call Click method without using MoveMouseTo method, the mouse cursor will not move from current position.</para>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.SetText(System.String)">
+            <summary>
+                <para>
+ Set text to the elements.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="text">
+                <para>Set the text to set to the elements.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.InputText(System.String)">
+            <summary>
+                <para>
+ Input text to the element, as if typed on the keyboard.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="text">
+                <para>Set the text to input to the elements.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.SendKeys(System.String)">
+            <summary>
+                <para>
+ Sends one or more keystrokes to the element, as if typed on the keyboard. 
+ It is similar to Keyboard.SendKeys method.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="keys">
+                <para>A String that defines the keys to send.</para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks>
+                <para>Confirm how to set keys argument at Keyboad.SendKeys method document.</para>
+                <see>https://msdn.microsoft.com/en-us/library/ms127847(v=vs.110).aspx</see>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Sleep(System.TimeSpan)">
+            <summary>
+                <para>
+ Blocks the current thread for a specified time.
+ This method is lazy evaluation.
+ </para>
+            </summary>
+            <param name="timeout">
+                <para>A System.TimeSpan set to the amount of time for which the thread is blocked. </para>
+            </param>
+            <returns>
+                <para>
+ Return lazy evaluation query as IEnumerable&lt;IOperationElement&gt;.
+ To force immediate execution of any query and cache its results, and operate such as Click method, you can call the ToList&lt;TSource&gt; or ToArray&lt;TSource&gt; methods.
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.IOperationElement.Text">
+            <summary>
+                <para>
+ Get a text of edit control or other text elements, if can get it.
+ You are more likely to be able to get a text in the element of WPF based app, but less in the element of Windows Handle based app. In that case use GetTextViaClipboard method instead.
+ This method is eager evaluation.
+ </para>
+            </summary>
+            <returns>
+                <para>Return a text, if can get it. Otherwise return null reference (Nothing in Visual Basic) or String.Empty.</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.GetTextViaClipboard(System.Boolean)">
+            <summary>
+                <para>
+ Get a text of edit control elements via Ctrl +A, Ctrl + C and getting from clipboard, if can get it.
+ This method is eager evaluation.
+ </para>
+            </summary>
+            <param name="keepCopied">
+                <para>Set true to kepp text in clipboard, that copied by this method. Otherwise restore clipboard text.</para>
+            </param>
+            <returns>
+                <para>Return a text, if can get it. Otherwise return null reference (Nothing in Visual Basic) or String.Empty.</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.IOperationElement.IsVisible">
+            <summary>
+                <para>Gets a value indicating whether this element is visible in the user interface (UI).</para>
+            </summary>
+            <returns>
+                <para>true if the element is visible; otherwise, false.</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.IOperationElement">
+            <summary>
+                <para>Query and operate Desktop App elements.</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Infrastructures.StringExtensions.EscapeForJavaScript(System.String)">
+            <summary>
+ 文字列を JavaScript 用にエスケープして返します。
+ </summary>
+            <param name="this"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Infrastructures.StringExtensions.EscapeForSendKeys(System.String)">
+            <summary>
+ 文字列を SendKeys 用にエスケープして返します。
+ </summary>
+            <param name="this"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

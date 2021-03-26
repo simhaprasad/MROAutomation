@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>
+CodedUIQuery
+</name>
+    </assembly>
+    <members>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Parent(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ 親要素を取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Children(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ セレクタで選択される子要素を取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.WaitForChildren(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ 子要素をセレクタで選択して要素が1つ以上見つかるまで待機して、見つかったタイミングで返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <param name="timeout">
+                <para>タイムアウトまでの時間を指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>指定されたタイムアウト時間までに要素が見つからなかったとき</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Filter(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ 要素の中からセレクタで選択して返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Find(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ セレクタで選択される全ての子孫要素を取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.WaitForFind(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ 子孫要素をセレクタで選択して要素が1つ以上見つかるまで待機して、見つかったタイミングで返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <param name="timeout">
+                <para>タイムアウトまでの時間を指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>指定されたタイムアウト時間までに要素が見つからなかったとき</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Click(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ 要素をクリックし、クリック可能な要素を返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Click(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.Int32,System.Int32,Net.Surviveplus.CodedUIQuery.MouseButton)">
+            <summary>
+                <para>
+ 要素をクリックし、クリック可能な要素を返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="x">
+                <para>クリック可能な位置からの水平方向の相対座標を指定します。</para>
+            </param>
+            <param name="y">
+                <para>クリック可能な位置からの垂直方向の相対座標を指定します。</para>
+            </param>
+            <param name="button">
+                <para>要素をクリックするマウスボタンを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.MoveMouseTo(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>
+ マウスカーソルを現在の位置から要素の位置まで移動します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks>
+                <para>MoveMouseTo メソッドを使わずに Click メソッドを実行した場合は、マウスカーソルは現在の位置から移動しません。</para>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.SetText(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ 要素にテキストを設定します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="text">
+                <para>要素に設定するテキストを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.InputText(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ キーボードからタイプされるのと同じように、要素にテキストを入力します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="text">
+                <para>要素に入力するテキストを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.SendKeys(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.String)">
+            <summary>
+                <para>
+ キーボードからタイプされるのと同じように、キーストロークを要素に送信します。
+ このメソッドは Keyboad.SendKeys メソッドににています。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="keys">
+                <para>送信するキーを定義する String。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks>
+                <para>Keyboard.SendKeys メソッドのドキュメントで、keys 引数の指定方法を確認してください。</para>
+                <see>https://msdn.microsoft.com/ja-jp/library/ms127847(v=vs.110).aspx</see>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IEnumerableIOperationElementExtensions.Sleep(System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.TimeSpan)">
+            <summary>
+                <para>
+ 指定された時間の間、現在のスレッドをブロックします。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="timeout">
+                <para>スレッドがブロックされる時間を指定する System.TimeSpan の値。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.Handle">
+            <summary>
+ ウィンドウハンドルを取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfProcessName">
+            <summary>
+ ProcessName プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.ProcessName">
+            <summary>
+ プロセス名を取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfClassName">
+            <summary>
+ ClassName プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.ClassName">
+            <summary>
+ クラス名を取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.WindowHandleElement.valueOfWindowTitle">
+            <summary>
+ WindowTitle プロパティのバッキングフィールドです。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WindowHandleElement.WindowTitle">
+            <summary>
+ ウィンドウタイトルを取得します。
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WindowHandleElement">
+            <summary>
+                <para>
+ Windows ハンドルとWin32 API のみを使用して、デスクトップの要素をクエリ、および操作します。
+ このクラスは互換性のために残されています。
+ </para>
+            </summary>
+            <remarks>
+ You can start, to query or operate, from Dekstop.Handles property, App.Handle property.
+ This is implementation with the results used for users more than 100,000. But this class is Obsolete.
+ Use WpfElement class instead of this class, if you are able to use it.
+ </remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.My.Resources.Resources.ResourceManager">
+            <summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.My.Resources.Resources.Culture">
+            <summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.My.Resources.Resources">
+            <summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Left">
+            <summary>
+                <para>マウスの左ボタン</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Middle">
+            <summary>
+                <para>マウスの中央ボタン</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUIQuery.MouseButton.Right">
+            <summary>
+                <para>マウスの右ボタン</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.MouseButton">
+            <summary>
+                <para>マウス デバイスのボタンを指定する値を定義します。 </para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.ToString">
+            <summary>
+                <para>現在のオブジェクトを表す文字列を返します。</para>
+            </summary>
+            <returns>
+                <para>現在のオブジェクトを説明する文字列。</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.#ctor(System.Windows.Automation.AutomationElement)">
+            <summary>
+ Initializes a new instance of the class.
+ </summary>
+            <param name="automation"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.WpfElement.#ctor">
+            <summary>
+ Initializes a new instance of the class.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WpfElement.NativeMethods">
+            <summary>
+ Allows managed code to call unmanaged functions with Platform Invocation Services (PInvoke).
+ </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.WpfElement.UIAutomationElement">
+            <summary>
+ Get System.Windows.Automation.AutomationElement object.
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.WpfElement">
+            <summary>
+                <para>
+ マイクロソフト UIオートメーション の技術を使用して、デスクトップの要素をクエリ、および操作します。
+ Visual Studio 2013 Premium/Ultimate の「コード化されたUIテスト」では、Windows ストアアプリと Windows Phone アプリに対しても動作します。
+ </para>
+            </summary>
+            <remarks>
+ You can start, to query or operate, from Dekstop.Elements property.
+ Use WindowHandleElement class instead of this class, if it don't work well.
+ </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.ContainsText">
+            <summary>
+ Indicates whether there is data on the Clipboard in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <returns>true if there is text data on the Clipboard; otherwise, false.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.GetText">
+            <summary>
+ Retrieves text data from the Clipboard in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <returns>The Clipboard text data or System.String.Empty if the Clipboard does not contain data in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.Clear">
+            <summary>
+ Removes all data from the Clipboard.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Clipboard.SetText(System.String)">
+            <summary>
+ Clears the Clipboard and then adds text data in the System.Windows.Forms.TextDataFormat.Text or System.Windows.Forms.TextDataFormat.UnicodeText format, depending on the operating system.
+ </summary>
+            <param name="text">
+ The text to add to the Clipboard.
+ </param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.Clipboard">
+            <summary>
+ Operate Clipboard in "Coded UI Test" or  "Desktop Automation",  instead  of Windows.Forms.Clipboard.
+ This will run in single-threaded apartment (STA) mode thread.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.Desktop.Handles">
+            <summary>
+ Get IOperationElement object to query via CodedUIQuery with using Windows Handles.
+ Operate Windows Forms Apps, not WPF Apps, for "Coded UI Test" or "Desktop Automation".
+ This is Obsolete. Use Elements property instead of this, if you can.
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.Desktop.Elements">
+            <summary>
+ Get IOperationElement object to query via CodedUIQuery with Microsoft UIAutomation technology.
+ Operate both WPF Apps and Windows Forms Apps, for "Coded UI Test" or "Desktop Automation".
+ </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.Desktop">
+            <summary>
+                <para>Windows デスクトップの要素を操作します。</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Parent">
+            <summary>
+                <para>
+ 親要素を IEnumerable&lt;IOperationElement&gt; として取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Children(System.String)">
+            <summary>
+                <para>
+ セレクタで選択される子要素を取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.WaitForChildren(System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ 子要素をセレクタで選択して要素が1つ以上見つかるまで待機して、見つかったタイミングで返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <param name="timeout">
+                <para>タイムアウトまでの時間を指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>指定されたタイムアウト時間までに要素が見つからなかったとき</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Filter(System.String)">
+            <summary>
+                <para>
+ 要素の中からセレクタで選択して返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Find(System.String)">
+            <summary>
+                <para>
+ セレクタで選択される全ての子孫要素を取得します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.WaitForFind(System.String,System.TimeSpan)">
+            <summary>
+                <para>
+ 子孫要素をセレクタで選択して要素が1つ以上見つかるまで待機して、見つかったタイミングで返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="selector">
+                <para>セレクタを指定します。</para>
+                <para>
+ #handle&lt;ProcessName&gt;{ClassName}[WindowTitle](xaml x:Name) 
+ </para>
+                <para>OR条件にする場合は , 区切りで連結します。</para>
+            </param>
+            <param name="timeout">
+                <para>タイムアウトまでの時間を指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <exception cref="T:System.TimeoutException">
+                <para>指定されたタイムアウト時間までに要素が見つからなかったとき</para>
+            </exception>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Click">
+            <summary>
+                <para>
+ 要素をクリックし、クリック可能な要素を返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Click(System.Int32,System.Int32,Net.Surviveplus.CodedUIQuery.MouseButton)">
+            <summary>
+                <para>
+ 要素をクリックし、クリック可能な要素を返します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="x">
+                <para>クリック可能な位置からの水平方向の相対座標を指定します。</para>
+            </param>
+            <param name="y">
+                <para>クリック可能な位置からの垂直方向の相対座標を指定します。</para>
+            </param>
+            <param name="button">
+                <para>要素をクリックするマウスボタンを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.MoveMouseTo">
+            <summary>
+                <para>
+ マウスカーソルを現在の位置から要素の位置まで移動します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks>
+                <para>MoveMouseTo メソッドを使わずに Click メソッドを実行した場合は、マウスカーソルは現在の位置から移動しません。</para>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.SetText(System.String)">
+            <summary>
+                <para>
+ 要素にテキストを設定します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="text">
+                <para>要素に設定するテキストを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.InputText(System.String)">
+            <summary>
+                <para>
+ キーボードからタイプされるのと同じように、要素にテキストを入力します。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="text">
+                <para>要素に入力するテキストを指定します。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.SendKeys(System.String)">
+            <summary>
+                <para>
+ キーボードからタイプされるのと同じように、キーストロークを要素に送信します。
+ このメソッドは Keyboad.SendKeys メソッドににています。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="keys">
+                <para>送信するキーを定義する String。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks>
+                <para>Keyboard.SendKeys メソッドのドキュメントで、keys 引数の指定方法を確認してください。</para>
+                <see>https://msdn.microsoft.com/ja-jp/library/ms127847(v=vs.110).aspx</see>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.Sleep(System.TimeSpan)">
+            <summary>
+                <para>
+ 指定された時間の間、現在のスレッドをブロックします。
+ このメソッドは遅延評価されます。
+ </para>
+            </summary>
+            <param name="timeout">
+                <para>スレッドがブロックされる時間を指定する System.TimeSpan の値。</para>
+            </param>
+            <returns>
+                <para>
+ 遅延評価されるクエリを IEnumerable&lt;IOperationElement&gt; として返します。
+ クエリの即時実行を強制し、その結果をキャッシュし、Clickメソッドなどの操作を完了するには、ToList&lt;TSource&gt; メソッドまたは ToArray&lt;TSource&gt; メソッドを呼び出します。 
+ </para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.IOperationElement.Text">
+            <summary>
+                <para>
+ 可能な場合、編集コントロールやその他のテキスト要素のテキストを取得します。 
+ WPFアプリの要素ではテキストを取得出来る可能性が高いですが、Windows Hanlde を使用するアプリでは取得出来ない場合があります。その場合は GetTextViaClipboard メソッドを代わりに使用します。
+ このメソッドは先行評価されます。
+ </para>
+            </summary>
+            <returns>
+                <para>取得出来た場合はテキストを返します。それ以外は null 参照 (Visual Basic では Nothing) あるいは String.Empty を返します。</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.IOperationElement.GetTextViaClipboard(System.Boolean)">
+            <summary>
+                <para>
+ 可能な場合、Ctrl + A、Ctrl + C とクリップボードを介して、編集コントロール要素のテキストを取得します。 
+ このメソッドは先行評価されます。
+ </para>
+            </summary>
+            <param name="keepCopied">
+                <para>True を指定するとこのメソッドでコピーしたクリップボードのテキストを維持します。それ以外では、クリップボードのテキストを元に戻します。</para>
+            </param>
+            <returns>
+                <para>取得出来た場合はテキストを返します。それ以外は null 参照 (Visual Basic では Nothing) あるいは String.Empty を返します。</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUIQuery.IOperationElement.IsVisible">
+            <summary>
+                <para>この要素がユーザー インターフェイス (UI) に表示されるかどうかを示す値を取得します。</para>
+            </summary>
+            <returns>
+                <para>要素が表示される場合は true。それ以外の場合は false。</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUIQuery.IOperationElement">
+            <summary>
+                <para>デスクトップの要素をクエリ、および操作します。</para>
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Infrastructures.StringExtensions.EscapeForJavaScript(System.String)">
+            <summary>
+ 文字列を JavaScript 用にエスケープして返します。
+ </summary>
+            <param name="this"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUIQuery.Infrastructures.StringExtensions.EscapeForSendKeys(System.String)">
+            <summary>
+ 文字列を SendKeys 用にエスケープして返します。
+ </summary>
+            <param name="this"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

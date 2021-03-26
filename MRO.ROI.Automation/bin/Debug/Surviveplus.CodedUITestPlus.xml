@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Surviveplus.CodedUITestPlus</name>
+    </assembly>
+    <members>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.App">
+            <summary>
+                <para>Operate application that is tested in Coded UI Test.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.App.disposed">
+            <summary>
+            Internal variable which checks if Dispose has already been called
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.Finalize">
+            <summary>
+            The destructor for the class.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.#ctor(System.Diagnostics.Process)">
+            <summary>
+                <para>Initialize class instance.</para>
+            </summary>
+            <param name="process">
+                <para>Set process object of target application.</para>
+            </param>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.App.Handle">
+            <summary>
+                <para>
+            Get IOperationElement object of this app to query via CodedUIQuery with using Windows Handles.
+            Operate Windows Forms Apps, not WPF Apps, for "Coded UI Test". 
+            This property is Obsolete. 
+            Use Element property instead of this.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.App.Element">
+            <summary>
+            Get IOperationElement object of this app to query via CodedUIQuery with Microsoft UIAutomation technology.
+            Operate both WPF Apps and Windows Forms Apps, for "Coded UI Test".
+            <para>
+            マイクロソフト UI オートメーション技術を使用した CodedUIQuery によるクエリのために、このアプリの IOperationElement オブジェクト を取得します。
+            「コード化されたUIテスト」のために、WPFアプリと Windows フォームアプリの両方を操作できます。
+            </para></summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.App.Name">
+            <summary>
+                <para>
+            Set or get name of this app.
+            This is used in Console.WriteLine.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.App.Html">
+            <summary>
+                <para>
+            When this app is Internet Explorer, get HTMLDocument object of this app. 
+            Otherwise return a null reference (Nothing in Visual Basic).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.App.WellKnownApp">
+            <summary>
+            よく知られたアプリである場合、その種類を取得します。
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.CloseMainWindow(System.Boolean)">
+            <summary>
+                <para>Close the main window of app. </para>
+            </summary>
+            <param name="sendAltN">
+                <para>If true then, send Alt + N key to close confirm dialog, in closing the main window.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.GetHtmlText(System.String)">
+            <summary>
+                <para>
+            When this app is Internet Explorer, get HTML text of the element that is specifed by the CSS/jQuery like selector. 
+            Otherwise return a null reference (Nothing in Visual Basic).
+            </para>
+            </summary>
+            <param name="selector">
+                <para>
+            Set selector text to specify the HTML element. 
+            </para>
+            </param>
+            <returns>
+                <para>
+            Return HTML text of the element that is specifed by the CSS/jQuery like selector. 
+            </para>
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+                <para>
+            jQuery is not referenced in this web app.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.ExecuteJavaScript(System.String)">
+            <summary>
+                <para>
+            When this app is Internet Explorer, execute JavaScript code in this web app. 
+            Otherwise do nothing.
+            </para>
+            </summary>
+            <param name="code">
+                <para>
+            Set JavaScript code.
+            </para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.GetSolutionProjectBinFolder(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext,System.String,System.String)">
+            <summary>
+                <para>Get folder path of the project which is contained in the solution of Coded UI Test project.</para>
+            </summary>
+            <param name="context">
+                <para>Set TestContext property of the test class.</para>
+            </param>
+            <param name="projectName">
+                <para>Set the name of project.</para>
+            </param>
+            <param name="buildOption">
+                <para>Set build option text. For example, "Debug".</para>
+            </param>
+            <returns>
+                <para>Return folder path of the project.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.GetSolutionProjectFolder(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext,System.String)">
+            <summary>
+                <para>Get folder path of the project which is contained in the solution of Coded UI Test project.</para>
+            </summary>
+            <param name="context">
+                <para>Set TestContext property of the test class.</para>
+            </param>
+            <param name="projectName">
+                <para>Set the name of project.</para>
+            </param>
+            <returns>
+                <para>Return folder path of the project.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.LaunchSolutionProject(System.Object,System.String,System.String)">
+            <summary>
+                <para>
+            Launches  app, that is contained in the solution of Coded UI Test project, to test
+            with using "Debug" as buildOption and "projectName.exe" as appPathName.
+            </para>
+            </summary>
+            <param name="testClass">
+                <para>
+            Set the CodedUITest class instance. 
+            Normally, set this (Me in Visual Basic) in the TestMethod.
+            </para>
+            </param>
+            <param name="projectName">
+                <para>Set the project name of app.</para>
+            </param>
+            <param name="args">
+                <para>Set command-line option arguments.</para>
+            </param>
+            <returns>
+                <para>Return instance of app.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.LaunchSolutionProject(System.Object,System.String,System.String,System.String,System.String)">
+            <summary>
+                <para>Launches  app, that is contained in the solution of Coded UI Test project, to test.</para>
+            </summary>
+            <param name="testClass">
+                <para>
+            Set the CodedUITest class instance. 
+            Normally, set this (Me in Visual Basic) in the TestMethod.
+            </para>
+            </param>
+            <param name="projectName">
+                <para>Set the project name of app.</para>
+            </param>
+            <param name="buildOption">
+                <para>Set the build option. Normally, set "Debug" or "Release".</para>
+            </param>
+            <param name="appName">
+                <para>Set the file name of app. For example, set "SampleApp.exe".</para>
+            </param>
+            <param name="args">
+                <para>Set command-line option arguments.</para>
+            </param>
+            <returns>
+                <para>Return instance of app.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.LaunchWellKnownApp(Net.Surviveplus.CodedUITestPlus.WellKnownApp,System.String)">
+            <summary>
+                <para>
+            Launches well known app.
+            Please confirm that application can start beforehand. For example, setup or how-to will may start in first time.
+            </para>
+            </summary>
+            <param name="wellKnownApp">
+                <para>Set kind of app.</para>
+            </param>
+            <param name="args">
+                <para>Set command-line option arguments.</para>
+            </param>
+            <returns>
+                <para>Return instance of app.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.LaunchWebServer(System.String,System.Int32)">
+            <summary>
+                <para>
+            Launches web server (IIS Express).
+            </para>
+            </summary>
+            <param name="path">
+                <para>Set the full name of the folder of web app.</para>
+            </param>
+            <param name="port">
+                <para>Set the port of web app.</para>
+            </param>
+            <returns>
+                <para>Return instance of app of web server.</para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.App.LaunchSolutionWebServer(System.Object,System.String,System.Int32)">
+            <summary>
+                <para>
+            Launches web server (IIS Express).
+            </para>
+            </summary>
+            <param name="testClass">
+                <para>
+            Set the CodedUITest class instance. 
+            Normally, set this (Me in Visual Basic) in the TestMethod.
+            </para>
+            </param>
+            <param name="projectName">
+                <para>Set the project name of web app.</para>
+            </param>
+            <param name="port">
+                <para>Set the port of web app.</para>
+            </param>
+            <returns>
+                <para>Return instance of app of web server.</para>
+            </returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.WebServerApp">
+            <summary>
+                <para>Operate web server that is tested in Coded UI Test.</para>
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.WebServerApp.#ctor(System.Diagnostics.Process)">
+            <summary>
+                <para>Initialize class instance.</para>
+            </summary>
+            <param name="process">
+                <para>Set process object of target application.</para>
+            </param>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.WebServerApp.Url">
+            <summary>
+                <para>
+            Get URL of web app.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.EnvironmentExtensions">
+            <summary>
+            Static class which is defined extension methods for System.Environment.
+            </summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.EnvironmentExtensions.NativeMethods">
+            <summary>
+            Allows managed code to call unmanaged functions with Platform Invocation Services (PInvoke).
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.EnvironmentExtensions.IsWow64">
+            <summary>
+            Get current system is running on Wow64 mode.
+            </summary>
+            <returns>
+            Returns true if Wow 64 mode; otherwise returns false.
+            </returns>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.EnvironmentExtensions.Is64BitOperatingSystem">
+            <summary>
+            Get current system is 64 bit OS, or else.
+            This extension method is instead of Environment.Is64BitOperatingSystem. That is supported on .net Framework 4.
+            </summary>
+            <returns>
+            Returns true if 64bit OS; otherwise returns false.
+            </returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder">
+            <summary>
+            This interface is used by ScreenRecorder as infrastructures of the framework, to record screen to video.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.Start(System.Drawing.Rectangle)">
+            <summary>Start recording a part of screen to video file.</summary>
+            <param name="bounds">Specify the bounds of the part of screen.</param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.Stop">
+            <summary>Stop recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.Pause">
+            <summary>Pause recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.Resume">
+            <summary>Resume recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.Save(System.IO.FileInfo)">
+            <summary>
+            Save a video file.
+            If you don't call Save method before disposing this instance, a video file is not saved.
+            </summary>
+            <param name="file">Specify the file name.</param>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.INativeScreenRecorder.WorkFolder">
+            <summary>
+            Get or set the name of the working folder. 
+            This folder must be used by only this instance.
+            </summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp">
+            <summary>
+            Operate installed app.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.SearchRegistry(System.String,System.String)">
+            <summary>
+            Search and get Registry Key for InstalledApp infrastructures.
+            </summary>
+            <param name="key"></param>
+            <param name="valueName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.GetPath(System.String)">
+            <summary>
+            Get Path value of Current Version of Microsoft Office and other apps,
+            from HKEY_LOCAL\Software\Microsoft\Windows\CurrentVersion\App Paths\appPathName.
+            </summary>
+            <param name="appName">
+            Set Microsoft Office application name. 
+            "OUTLOOK.EXE", "excel.exe", "winword.exe", "powerpnt.exe", "MSACCESS.EXE", "OneNote.exe", "WINPROJ.EXE", "Lync.exe", "IEXPLORE.EXE", "devenv.exe", "firefox.exe" are supported.
+            </param>
+            <returns>
+            Return application file full name, when App Paths key is exist. 
+            Otherwise, return null reference (Nothing in Visual Basic).
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.GetOfficeVersionName(System.String)">
+            <summary>
+            Get CurVer value of Microsoft Office.
+            </summary>
+            <param name="officeAppName">
+            Set Microsoft Office application name. 
+            "Outlook", "Excel", "Word", "PowerPoint", "Access", "OneNote", "MSProject" are supported.
+            </param>
+            <returns>
+            Return application verion and name text. 
+            For example, "Outlook.Application.12".
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.GetCLSID(System.String)">
+            <summary>
+            Get CLSID value of Microsoft Office.
+            </summary>
+            <param name="officeAppName">
+            Set Microsoft Office application name. 
+            "Outlook", "Excel", "Word", "PowerPoint", "Access", "OneNote", "MSProject" are supported.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.GetPathFromCLSID(System.String)">
+            <summary>
+            Get application full path from CLSID.
+            </summary>
+            <param name="clsid">Set CLSID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.InstalledApp.GetOfficeAppFullName(Net.Surviveplus.CodedUITestPlus.WellKnownApp)">
+            <summary>
+            Get file path of Microsoft Office app.
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder">
+            <summary>
+            Record screen to video with using Microsoft Expression Encoder.
+            This class is infrastructures of the framework.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Finalize">
+            <summary>
+            Destruct instance of the class.
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.disposedValue">
+            <summary>
+            Backing field to track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Dispose(System.Boolean)">
+            <summary>
+            Dispose managed and unmanaged resources of this instance.
+            </summary>
+            <param name="disposing">If disposing equals true, managed and unmanaged resources can be disposed. If disposing equals false, only unmanaged resources can be disposed. </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Start(System.Drawing.Rectangle)">
+            <summary>Start recording a part of screen to video file.</summary>
+            <param name="bounds">Specify the bounds of the part of screen.</param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Stop">
+            <summary>Stop recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Pause">
+            <summary>Pause recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Resume">
+            <summary>Resume recording.</summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.Save(System.IO.FileInfo)">
+            <summary>
+            Save a video file.
+            If you don't call Save method before disposing this instance, a video file is not saved.
+            </summary>
+            <param name="file">Specify the file name.</param>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.WorkFolder">
+            <summary>
+            Get or set the name of the working folder. 
+            This folder must be used by only this instance.
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.IsStarted">
+            <summary>
+            Get the value of whether recording was started.
+            </summary>
+        </member>
+        <member name="P:Net.Surviveplus.CodedUITestPlus.Infrastructures.RecorderWithUsingExpressionEncoder.IsPaused">
+            <summary>
+            Get the value of whether recording was paused.
+            </summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.Infrastructures.WellKnownAppExtensions">
+            <summary>
+            Static class which is defined extension methods.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.WellKnownAppExtensions.ToPathName(Net.Surviveplus.CodedUITestPlus.WellKnownApp)">
+            <summary>
+            Get App Paths name.
+            </summary>
+            <param name="me">The instance of the type which is added this extension method.</param>
+            <returns>
+            Returns name if supported; otherwise returns null.
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.Infrastructures.WellKnownAppExtensions.ToApplicationName(Net.Surviveplus.CodedUITestPlus.WellKnownApp)">
+            <summary>
+            Get Application name.
+            </summary>
+            <param name="me">The instance of the type which is added this extension method.</param>
+            <returns>
+            Returns name if supported; otherwise returns null.
+            </returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.IOperationElementExtensions">
+            <summary>
+            Static class which is defined extension methods.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.IOperationElementExtensions.ToUITestControl(Net.Surviveplus.CodedUIQuery.IOperationElement)">
+            <summary>
+                <para>
+            Get UITestControl for Microsoft Coded UI Test framework, if can get it. 
+            For example Mouse.Click method require this object.
+            This method is eager evaluation.
+            </para>
+            </summary>
+            <returns>
+                <para>Return UITestControl instance, if can get it. Otherwise return null reference (Nothing in Visual Basic).</para>
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.OperationAssert">
+            <summary>
+                <para>
+            Verifies conditions in Coded UI Test using CodedUIQuery.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.IsNullOrOffscreen(System.String,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>Verifies that result of specified query does not exist, or all of that are offscreen.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.IsSingleVisible(System.String,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>Verifies that result of specified query exist only one, and that is visible.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.IsSingle(System.String,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>Verifies that result of specified query exist only one.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.CountIs(System.String,System.Int32,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>Verifies that count of the result of specified query and specified expected count are equal.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="expectedCount">
+                <para>Set expected count of the result of query.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.TextIs(System.String,System.String,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement})">
+            <summary>
+                <para>Verifies that all of text of the result of specified query and specified expected text are equal, by using Text property.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="expected">
+                <para>Set expected text of the result of query.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery. Text properties of the result of this query are got, to verify.</para>
+            </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.TextViaClipboardIs(System.String,System.String,System.Collections.Generic.IEnumerable{Net.Surviveplus.CodedUIQuery.IOperationElement},System.Boolean)">
+            <summary>
+                <para>Verifies that all of text of the result of specified query and specified expected text are equal, by using GetTextViaClipboard method.</para>
+            </summary>
+            <param name="message">
+                <para>Set a message which express purpose and action of the query and verification, to output to Console.</para>
+            </param>
+            <param name="expected">
+                <para>Set expected text of the result of query.</para>
+            </param>
+            <param name="query">
+                <para>Set the query of CodedUIQuery. GetTextViaClipboard methods of the result of this query are called, to verify.</para>
+            </param>
+            <param name="keepCopied"></param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.OperationAssert.ClipboardTextIs(System.String)">
+            <summary>
+                <para>Verifies that clipboard text and specified expected text are equal.</para>
+            </summary>
+            <param name="expected">
+                <para>Set expected text of clipboard.</para>
+            </param>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.ScreenRecorder">
+            <summary>
+                <para>Record screen to video file and attach it to the test result. This is  beta feature.</para>
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.Finalize">
+            <summary>
+            Destruct instance of the class.
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.disposedValue">
+            <summary>
+            Backing field to track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.Dispose(System.Boolean)">
+            <summary>
+            Dispose managed and unmanaged resources of this instance.
+            </summary>
+            <param name="disposing">If disposing equals true, managed and unmanaged resources can be disposed. If disposing equals false, only unmanaged resources can be disposed. </param>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.StartRecording(System.Object,Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle)">
+            <summary>
+                <para>Start recording and get the instance of it. This is  beta feature.</para>
+            </summary>
+            <param name="testClass">
+                <para>
+            Set the CodedUITest class instance. 
+            Normally, set this (Me in Visual Basic) in the TestMethod.
+            </para>
+            </param>
+            <param name="style">
+                <para>Specify how to record video and save file.</para>
+            </param>
+            <returns>
+                <para>
+            Return the instance of ScreenRecorder.
+            The framework stop the recording and save the file, when it is disposing.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.ScreenRecorder.StartRecording(System.Object,Net.Surviveplus.CodedUITestPlus.App,Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle)">
+            <summary>
+                <para>Start recording and get the instance of it. This is  beta feature.</para>
+            </summary>
+            <param name="testClass">
+                <para>
+            Set the CodedUITest class instance. 
+            Normally, set this (Me in Visual Basic) in the TestMethod.
+            </para>
+                <param name="app">
+                    <para xml:lang="en">Set app of the window to record.</para>
+                    <para xml:lang="ja">録画するウィンドウのアプリを指定します。</para>
+                </param>
+            </param>
+            <param name="style">
+                <para>Specify how to record video and save file.</para>
+            </param>
+            <returns>
+                <para>
+            Return the instance of ScreenRecorder.
+            The framework stop the recording and save the file, when it is disposing.
+            </para>
+            </returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle">
+            <summary>
+                <para>Specify how to record video and save file.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle.None">
+            <summary>
+                <para>Nothing or unspecified.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle.SaveAlways">
+            <summary>
+                <para>Save to the file always.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.ScreenRecordingStyle.SaveIfExceptionThrown">
+            <summary>
+                <para>Save to the file if an exception is thrown.</para>
+            </summary>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.UITestControlExtensions">
+            <summary>
+            Static class which is defined extension methods.
+            </summary>
+        </member>
+        <member name="M:Net.Surviveplus.CodedUITestPlus.UITestControlExtensions.Query(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+                <para>
+            Get IOperationElement object to query via CodedUIQuery.
+            This method is eager evaluation.
+            </para>
+            </summary>
+            <param name="me">
+                <para>The instance of the type which is added this extension method.</para>
+            </param>
+            <returns>
+                <para>Returns IOperationElement object.</para>
+            </returns>
+        </member>
+        <member name="T:Net.Surviveplus.CodedUITestPlus.WellKnownApp">
+            <summary>
+                <para>Kind of target app that is well known.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.None">
+            <summary>
+                <para>Nothing or unspecified.</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Notepad">
+            <summary>
+                <para>Windows Notepad</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Word">
+            <summary>
+            Microsoft Word
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Excel">
+            <summary>
+            Microsoft Excel
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.PowerPoint">
+            <summary>
+            Microsoft PowerPoint
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Access">
+            <summary>
+            Microsoft Access
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.OneNote">
+            <summary>
+            Microsoft OneNote
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Project">
+            <summary>
+            Microsoft Project
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Outlook">
+            <summary>
+            Microsoft Outlook
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Lync">
+            <summary>
+            Microsoft Lync
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.VisualStudio">
+            <summary>
+            Microsoft Visual Studio
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.VisualStudioExperimental">
+            <summary>
+                <para>Experimental Instance of Visual Studio</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Calculator">
+            <summary>
+                <para>Windows Calculator</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Explorer">
+            <summary>
+                <para>Windows File Explorer</para>
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.InternetExplorer">
+            <summary>
+            Microsoft Internet Explorer
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.InternetExplorerInPrivate">
+            <summary>
+            Microsoft Internet Explorer (InPrivate)
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.EmEditor">
+            <summary>
+            EmEditor
+            </summary>
+        </member>
+        <member name="F:Net.Surviveplus.CodedUITestPlus.WellKnownApp.Firefox">
+            <summary>
+            Mozilla Firefox
+            </summary>
+        </member>
+    </members>
+</doc>

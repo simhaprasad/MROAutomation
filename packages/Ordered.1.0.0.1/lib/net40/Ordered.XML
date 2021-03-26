@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ordered</name>
+    </assembly>
+    <members>
+        <member name="T:Ordered.OrderedExtensions">
+            <summary>
+            Algorithms for ordered collections.
+            Thus all input collections must be sorted to get correct result.
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Difference``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Subtracts second collection from first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Difference``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Subtracts second collection from first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Intersect``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Intersects two collections. Equal elements output from the first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Intersect``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Intersects two collections. Equal elements output from the first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Union``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Unions two collections. Equal elements output from the first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.Union``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Unions two collections. Equal elements output from the first collection.
+            The complexity is O(n).
+            </summary>
+        </member>
+        <member name="M:Ordered.OrderedExtensions.GroupJoin``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Action{``0,``1},System.Collections.Generic.IComparer{``2})">
+            <summary>
+            Joins two collections as child-parent relationship by the specified key.
+            Collections must be sorted by the key on which the join is performed.
+            The complexity is O(n).
+            </summary>
+            <param name="outer">Outer collection. Contains parent elements.</param>
+            <param name="inner">Inner collection. Contains child elements.</param>
+            <param name="outerKeySelector">Key selector for the outer collection.</param>
+            <param name="innerKeySelector">Key selection for the inner collection.</param>
+            <param name="joinAction">Action performed on key equality between outer and inner collections.</param>
+            <param name="comparer"></param>
+        </member>
+    </members>
+</doc>
