@@ -7,6 +7,8 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Threading;
 using OpenQA.Selenium.Interactions;
+using System.IO;
+using System.Reflection;
 
 namespace MRO.ROI.Automation
 {
@@ -21,7 +23,9 @@ namespace MRO.ROI.Automation
 
         public void Init(string testArea)
         {
-            string driverPath = @"C:\TestAutomation\MRO.AutomationTest.Solution\MRO.ROI.Test\Utilities";
+            //string driverPath = @"C:\TestAutomation\MRO.AutomationTest.Solution\MRO.ROI.Test\Utilities";
+            
+            string driverPath = Path.GetFullPath(Path.Combine(Assembly.GetExecutingAssembly().Location, "..", "..","..","Utilities\\chromedriver.exe"));
 
            BaseWebDriver = new ThreadLocal<RemoteWebDriver>(() =>
             {
